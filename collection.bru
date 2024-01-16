@@ -48,7 +48,7 @@ script:pre-request {
     'X-Fresns-Uid',
     'X-Fresns-Uid-Token',
     'X-Fresns-Signature-Timestamp',
-  ].filter((v) => headers[v] != null && headers[v] != undefined).sort();
+  ].filter((v) => headers[v]).sort();
   
   const stringSignTemp = strA.map((key) => `${key}=${headers[key]}`).join('&') + `&AppKey=${bru.getEnvVar("appKey")}`;
   
