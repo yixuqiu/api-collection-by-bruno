@@ -1,0 +1,59 @@
+headers {
+  X-Fresns-Space-Id: {{apiSpaceId}}
+  X-Fresns-App-Id: {{appId}}
+  X-Fresns-Client-Platform-Id: {{clientPlatformId}}
+  X-Fresns-Client-Version: {{clientVersion}}
+  X-Fresns-Client-Device-Info: {{clientDeviceInfo}}
+  X-Fresns-Client-Timezone: {{clientTimezone}}
+  X-Fresns-Client-Lang-Tag: {{clientLangTag}}
+  X-Fresns-Client-Content-Format: {{clientContentFormat}}
+  X-Fresns-Aid: {{aid}}
+  X-Fresns-Aid-Token: {{aidToken}}
+  X-Fresns-Uid: {{uid}}
+  X-Fresns-Uid-Token: {{uidToken}}
+  X-Fresns-Signature: 
+  X-Fresns-Signature-Timestamp: 
+}
+
+auth {
+  mode: none
+}
+
+script:pre-request {
+  const CryptoJS = require("crypto-js");
+  
+  const now = Date.now();
+  const timezoneOffset = new Date().getTimezoneOffset() * 60000;
+  const utcTimestamp = now + timezoneOffset;
+  
+  const headers = {
+    'X-Fresns-Space-Id': bru.getEnvVar("apiSpaceId"),
+    'X-Fresns-App-Id': bru.getEnvVar("appId"),
+    'X-Fresns-Client-Platform-Id': bru.getEnvVar("clientPlatformId"),
+    'X-Fresns-Client-Version': bru.getEnvVar("clientVersion"),
+    'X-Fresns-Aid': bru.getEnvVar("aid"),
+    'X-Fresns-Aid-Token': bru.getEnvVar("aidToken"),
+    'X-Fresns-Uid': bru.getEnvVar("uid"),
+    'X-Fresns-Uid-Token': bru.getEnvVar("uidToken"),
+    'X-Fresns-Signature-Timestamp': utcTimestamp,
+  };
+  
+  const strA = [
+    'X-Fresns-Space-Id',
+    'X-Fresns-App-Id',
+    'X-Fresns-Client-Platform-Id',
+    'X-Fresns-Client-Version',
+    'X-Fresns-Aid',
+    'X-Fresns-Aid-Token',
+    'X-Fresns-Uid',
+    'X-Fresns-Uid-Token',
+    'X-Fresns-Signature-Timestamp',
+  ].filter((v) => headers[v] != null && headers[v] != undefined).sort();
+  
+  const stringSignTemp = strA.map((key) => `${key}=${headers[key]}`).join('&') + `&AppKey=${bru.getEnvVar("appKey")}`;
+  
+  const signature = CryptoJS.SHA256(stringSignTemp);
+  
+  req.setHeader("X-Fresns-Signature", signature);
+  req.setHeader("X-Fresns-Signature-Timestamp", utcTimestamp);
+}
