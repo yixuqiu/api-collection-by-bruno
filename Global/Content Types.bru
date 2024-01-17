@@ -1,0 +1,15 @@
+meta {
+  name: Content Types
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/global/{{type}}/content-types
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  type: post
+}

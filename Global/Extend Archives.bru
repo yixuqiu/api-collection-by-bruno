@@ -1,0 +1,21 @@
+meta {
+  name: Extend Archives
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/global/{{type}}/archives
+  body: none
+  auth: none
+}
+
+query {
+  fskey: 
+  gid: 
+  contentType: 
+}
+
+vars:pre-request {
+  type: user
+}
