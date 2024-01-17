@@ -1,0 +1,21 @@
+meta {
+  name: Command Word Request
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/common/cmd-word
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "fskey": "Fresns",
+    "cmdWord": "ipInfo",
+    "wordBody": {
+      "ip": "127.0.0.1"
+    }
+  }
+}
