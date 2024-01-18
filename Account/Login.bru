@@ -1,0 +1,18 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/account/auth-token
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "loginToken": "",
+    "deviceToken": ""
+  }
+}

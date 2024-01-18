@@ -1,0 +1,11 @@
+meta {
+  name: Logout
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{apiHost}}/api/fresns/v1/account/auth-token
+  body: none
+  auth: none
+}
