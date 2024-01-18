@@ -1,0 +1,21 @@
+meta {
+  name: Update Warning
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{apiHost}}/api/fresns/v1/file/{{fid}}/warning
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "warning": "" // nudity, violence, sensitive
+  }
+}
+
+vars:pre-request {
+  fid: 
+}
