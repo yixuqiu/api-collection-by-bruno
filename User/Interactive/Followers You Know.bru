@@ -1,0 +1,22 @@
+meta {
+  name: Followers You Know
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/user/{{uidOrUsername}}/followers-you-follow
+  body: none
+  auth: none
+}
+
+query {
+  filterType: 
+  filterKeys: 
+  pageSize: 
+  page: 
+}
+
+vars:pre-request {
+  uidOrUsername: jevan
+}

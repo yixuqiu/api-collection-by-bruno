@@ -1,0 +1,25 @@
+meta {
+  name: Mark List
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/user/{{uidOrUsername}}/mark/{{markType}}/{{listType}}
+  body: none
+  auth: none
+}
+
+query {
+  orderDirection: 
+  filterType: 
+  filterKeys: 
+  pageSize: 
+  page: 
+}
+
+vars:pre-request {
+  uidOrUsername: jevan
+  markType: follow
+  listType: users
+}

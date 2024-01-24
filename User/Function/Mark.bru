@@ -1,0 +1,19 @@
+meta {
+  name: Mark
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/user/mark
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "markType": "", //like,dislike,follow,block
+    "type": "", //user,group,hashtag,geotag,post,comment
+    "fsid": ""
+  }
+}

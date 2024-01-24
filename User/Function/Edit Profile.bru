@@ -1,0 +1,34 @@
+meta {
+  name: Edit Profile
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{apiHost}}/api/fresns/v1/user/profile
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "",
+    "nickname": "",
+    "avatarFid": "",
+    "avatarUrl": "",
+    "bannerFid": "",
+    "bannerUrl": "",
+    "gender": "",
+    "genderCustom": "",
+    "genderPronoun": "",
+    "birthday": "",
+    "birthdayDisplayType": "",
+    "bio": "",
+    "location": "",
+    "conversationLimit": "",
+    "commentLimit": "",
+    "contentLimit": "",
+    "moreInfo": {},
+    "archives": []
+  }
+}

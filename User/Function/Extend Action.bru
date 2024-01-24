@@ -1,0 +1,18 @@
+meta {
+  name: Extend Action
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/user/extend-action
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "eid": "",
+    "key": ""
+  }
+}
