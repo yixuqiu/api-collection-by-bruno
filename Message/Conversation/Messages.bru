@@ -1,0 +1,24 @@
+meta {
+  name: Messages
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/conversation/{{uidOrUsername}}/messages
+  body: none
+  auth: none
+}
+
+query {
+  orderDirection: 
+  pageListDirection: 
+  filterUserType: 
+  filterUserKeys: 
+  pageSize: 
+  page: 
+}
+
+vars:pre-request {
+  uidOrUsername: 
+}

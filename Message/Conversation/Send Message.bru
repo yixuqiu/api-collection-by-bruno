@@ -1,0 +1,19 @@
+meta {
+  name: Send Message
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/conversation/message
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "uidOrUsername": "", //uid or username
+    "message": "",
+    "fid": ""
+  }
+}

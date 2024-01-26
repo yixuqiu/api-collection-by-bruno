@@ -1,0 +1,19 @@
+meta {
+  name: Read
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{apiHost}}/api/fresns/v1/notification/read-status
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "type": "", //all or choose
+    "notificationType": "",
+    "notificationIds": ""
+  }
+}

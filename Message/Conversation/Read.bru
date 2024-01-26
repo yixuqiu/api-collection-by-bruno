@@ -1,0 +1,21 @@
+meta {
+  name: Read
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{apiHost}}/api/fresns/v1/conversation/{{uidOrUsername}}/read-status
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "cmids": "" //Leave empty to mark the entire conversation as read.
+  }
+}
+
+vars:pre-request {
+  uidOrUsername: 
+}
