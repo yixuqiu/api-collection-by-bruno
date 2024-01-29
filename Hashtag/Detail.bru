@@ -1,0 +1,20 @@
+meta {
+  name: Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/hashtag/{{htid}}/detail
+  body: none
+  auth: none
+}
+
+query {
+  filterType: 
+  filterKeys: 
+}
+
+vars:pre-request {
+  htid: 
+}
