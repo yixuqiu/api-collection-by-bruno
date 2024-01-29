@@ -1,0 +1,15 @@
+meta {
+  name: File Download Link
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/common/file/{{fid}}/link
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  fid: 
+}

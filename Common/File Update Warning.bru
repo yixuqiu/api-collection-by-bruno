@@ -1,11 +1,11 @@
 meta {
-  name: Update Warning
+  name: File Update Warning
   type: http
-  seq: 3
+  seq: 7
 }
 
 patch {
-  url: {{apiHost}}/api/fresns/v1/file/{{fid}}/warning
+  url: {{apiHost}}/api/fresns/v1/common/file/{{fid}}/warning
   body: json
   auth: none
 }

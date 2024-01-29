@@ -1,0 +1,16 @@
+meta {
+  name: File Storage Token
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/common/file/storage-token?type=image&usageType=post
+  body: none
+  auth: none
+}
+
+query {
+  type: image
+  usageType: post
+}
