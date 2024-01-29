@@ -1,0 +1,20 @@
+meta {
+  name: Admins
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/group/{{gid}}/admins
+  body: none
+  auth: none
+}
+
+query {
+  filterType: 
+  filterKeys: 
+}
+
+vars:pre-request {
+  gid: 
+}
