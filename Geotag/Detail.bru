@@ -1,0 +1,20 @@
+meta {
+  name: Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/geotag/{{gtid}}/detail
+  body: none
+  auth: none
+}
+
+query {
+  filterType: 
+  filterKeys: 
+}
+
+vars:pre-request {
+  gtid: 
+}

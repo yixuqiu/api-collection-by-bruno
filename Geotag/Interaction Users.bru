@@ -1,0 +1,24 @@
+meta {
+  name: Interaction Users
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/geotag/{{gtid}}/interaction/{{type}}
+  body: none
+  auth: none
+}
+
+query {
+  orderDirection: 
+  filterType: 
+  filterKeys: 
+  pageSize: 
+  page: 
+}
+
+vars:pre-request {
+  gtid: 
+  type: 
+}
