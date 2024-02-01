@@ -1,0 +1,22 @@
+meta {
+  name: Associated Users
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/post/{{pid}}/users
+  body: none
+  auth: none
+}
+
+query {
+  ~filterType: 
+  ~filterKeys: 
+  ~pageSize: 
+  ~page: 
+}
+
+vars:pre-request {
+  pid: 
+}

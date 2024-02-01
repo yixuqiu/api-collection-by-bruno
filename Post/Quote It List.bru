@@ -1,0 +1,36 @@
+meta {
+  name: Quote It List
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/post/{{pid}}/quotes
+  body: none
+  auth: none
+}
+
+query {
+  ~filterType: 
+  ~filterKeys: 
+  ~filterGroupType: 
+  ~filterGroupKeys: 
+  ~filterHashtagType: 
+  ~filterHashtagKeys: 
+  ~filterGeotagType: 
+  ~filterGeotagKeys: 
+  ~filterAuthorType: 
+  ~filterAuthorKeys: 
+  ~filterQuotedPostType: 
+  ~filterQuotedPostKeys: 
+  ~filterPreviewLikeUserType: 
+  ~filterPreviewLikeUserKeys: 
+  ~filterPreviewCommentType: 
+  ~filterPreviewCommentKeys: 
+  ~pageSize: 
+  ~page: 
+}
+
+vars:pre-request {
+  pid: 
+}
