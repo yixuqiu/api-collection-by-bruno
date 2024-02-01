@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{apiHost}}/api/fresns/v1/common/file/{{fid}}/link
+  url: {{apiHost}}/api/fresns/v1/common/file/{{fid}}/link?type&fsid
   body: none
   auth: none
+}
+
+query {
+  type: 
+  fsid: 
 }
 
 vars:pre-request {
