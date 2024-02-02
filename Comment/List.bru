@@ -1,0 +1,71 @@
+meta {
+  name: List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/comment/list
+  body: none
+  auth: none
+}
+
+query {
+  ~uidOrUsername: 
+  ~pid: 
+  ~cid: 
+  ~htid: 
+  ~gtid: 
+  ~gid: 
+  ~includeSubgroups: 
+  ~langTag: 
+  ~contentType: 
+  ~allDigest: 
+  ~digestState: 
+  ~sticky: 
+  ~createdDays: 
+  ~createdDate: 
+  ~createdDateGt: 
+  ~createdDateLt: 
+  ~likeCountGt: 
+  ~likeCountLt: 
+  ~dislikeCountGt: 
+  ~dislikeCountLt: 
+  ~followCountGt: 
+  ~followCountLt: 
+  ~blockCountGt: 
+  ~blockCountLt: 
+  ~commentCountGt: 
+  ~commentCountLt: 
+  ~blockUsers: 
+  ~blockGroups: 
+  ~blockHashtags: 
+  ~blockGeotags: 
+  ~blockPosts: 
+  ~blockComments: 
+  ~sinceCid: 
+  ~beforeCid: 
+  ~orderType: 
+  ~orderDirection: 
+  ~mapId: 
+  ~mapLng: 
+  ~mapLat: 
+  ~filterType: 
+  ~filterKeys: 
+  ~filterHashtagType: 
+  ~filterHashtagKeys: 
+  ~filterGeotagType: 
+  ~filterGeotagKeys: 
+  ~filterAuthorType: 
+  ~filterAuthorKeys: 
+  ~filterPreviewLikeUserType: 
+  ~filterPreviewLikeUserKeys: 
+  ~filterPreviewCommentType: 
+  ~filterPreviewCommentKeys: 
+  ~filterReplyToPostType: 
+  ~filterReplyToPostKeys: 
+  ~filterReplyToCommentType: 
+  ~filterReplyToCommentKeys: 
+  ~pageSize: 
+  ~page: 
+}

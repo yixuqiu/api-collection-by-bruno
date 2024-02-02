@@ -1,0 +1,24 @@
+meta {
+  name: Histories
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/comment/{{cid}}/histories
+  body: none
+  auth: none
+}
+
+query {
+  ~filterType: 
+  ~filterKeys: 
+  ~filterAuthorType: 
+  ~filterAuthorKeys: 
+  ~pageSize: 
+  ~page: 
+}
+
+vars:pre-request {
+  cid: 
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Delete
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{apiHost}}/api/fresns/v1/comment/{{cid}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  cid: 
+}
