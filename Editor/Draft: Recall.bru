@@ -1,0 +1,16 @@
+meta {
+  name: Draft: Recall
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/draft/{{did}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  type: 
+  did: 
+}

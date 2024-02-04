@@ -1,0 +1,38 @@
+meta {
+  name: Draft: Update
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/draft/{{did}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "editorFskey": "",
+    "quotePid": "", //Post-Only
+    "gid": "", //Post-Only
+    "title": "", //Post-Only
+    "content": "",
+    "isMarkdown": "",
+    "isAnonymous": "",
+    "commentPolicy": "", //Post-Only
+    "commentPrivate": "",
+    "gtid": "",
+    "locationInfo": {},
+    "archives": [],
+    "extends": [],
+    "deleteLocation": "",
+    "deleteArchive": "",
+    "deleteExtend": "",
+    "deleteFile": ""
+  }
+}
+
+vars:pre-request {
+  type: 
+  did: 
+}

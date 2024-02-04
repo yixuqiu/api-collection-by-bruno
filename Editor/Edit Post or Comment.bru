@@ -1,0 +1,16 @@
+meta {
+  name: Edit Post or Comment
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/edit/{{fsid}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  type: 
+  fsid: 
+}

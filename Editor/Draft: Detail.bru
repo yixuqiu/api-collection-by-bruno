@@ -1,0 +1,23 @@
+meta {
+  name: Draft: Detail
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/draft/{{did}}
+  body: none
+  auth: none
+}
+
+query {
+  ~filterGroupType: 
+  ~filterGroupKeys: 
+  ~filterGeotagType: 
+  ~filterGeotagKeys: 
+}
+
+vars:pre-request {
+  type: 
+  did: 
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Configs
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/configs
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  type: 
+}

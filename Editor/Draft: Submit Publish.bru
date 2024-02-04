@@ -1,0 +1,16 @@
+meta {
+  name: Draft: Submit Publish
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/draft/{{did}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  type: 
+  did: 
+}

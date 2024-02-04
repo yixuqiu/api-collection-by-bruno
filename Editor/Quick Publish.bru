@@ -1,0 +1,33 @@
+meta {
+  name: Quick Publish
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/editor/{{type}}/publish
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  ~commentPid: 
+  ~commentCid: 
+  ~quotePid: 
+  ~gid: 
+  ~title: 
+  ~content: 
+  ~isMarkdown: 
+  ~isAnonymous: 
+  ~commentPolicy: 
+  ~commentPrivate: 
+  ~gtid: 
+  ~locationInfo: 
+  ~archives: 
+  ~extends: 
+  ~image: 
+}
+
+vars:pre-request {
+  type: 
+}
