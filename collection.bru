@@ -78,9 +78,7 @@ script:pre-request {
   const utcTimezone = (timezoneOffsetInHours > 0 ? '+' : '') + timezoneOffsetInHours.toString();
   
   // Signature Timestamp (UTC+0)
-  const now = Date.now();
-  const timezoneOffset = new Date().getTimezoneOffset() * 60000;
-  const signTimestamp = now + timezoneOffset;
+  const signTimestamp = Date.now();
   
   // Headers
   const headers = {
