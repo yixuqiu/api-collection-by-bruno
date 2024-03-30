@@ -1,0 +1,23 @@
+meta {
+  name: File Update Info
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{apiHost}}/api/fresns/v1/common/file/{{fid}}/info
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "uploaded": "",
+    "warning": "", // none, nudity, violence, sensitive
+    "moreInfo": ""
+  }
+}
+
+vars:pre-request {
+  fid: 
+}

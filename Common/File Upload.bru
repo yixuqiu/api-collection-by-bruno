@@ -1,11 +1,11 @@
 meta {
-  name: File Uploads
+  name: File Upload
   type: http
   seq: 6
 }
 
 post {
-  url: {{apiHost}}/api/fresns/v1/common/file/uploads
+  url: {{apiHost}}/api/fresns/v1/common/file/upload
   body: multipartForm
   auth: none
 }
@@ -14,9 +14,7 @@ body:multipart-form {
   usageType: 
   usageFsid: 
   type: 
-  uploadMode: 
-  ~file: 
-  ~fileInfo: 
+  file: 
   ~warning: 
   ~moreInfo: 
 }
