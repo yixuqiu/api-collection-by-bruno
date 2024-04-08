@@ -1,0 +1,30 @@
+meta {
+  name: File: Make S3 Upload Token
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{apiHost}}/api/fresns/v1/common/file/upload-token
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "usageType": "", // userAvatar, userBanner, conversation, post, comment, postDraft, commentDraft
+    "usageFsid": "",
+    "type": "", // image,video,audio,document
+    "name": "",
+    "mime": "",
+    "extension": "",
+    "size": "",
+    "sha": "",
+    "shaType": "",
+    "width": "",
+    "height": "",
+    "duration": "",
+    "warning": "",
+    "moreInfo": {}
+  }
+}
